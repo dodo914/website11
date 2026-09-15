@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lava-primary: #ff4500;
+  --lava-secondary: #1a1a1a;
+}

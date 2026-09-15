@@ -1,0 +1,186 @@
+port=5001
+MONGODB_URI=mongodb+srv://Adam:FTNisdtlbAsLP1Y8@cluster0.9wbgodk.mongodb.net/adam_db?retryWrites=true&w=majority&appName=Cluster0JWT_SECRET=CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
+JWT_SECRET=CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
+JWT_EXPIRES_IN=7d
+
+CLOUDINARY_CLOUD_NAME=ddzwwxse
+CLOUDINARY_API_KEY=231391142538792
+CLOUDINARY_API_SECRET=2gXqmBnM6XWFftbzBPCIj4ILhik
+
+
+# ---- Pixel IDs / API Keys بتاعة الماركتينج (تتحط هنا مش في الفرونت) ----
+META_API_KEY=
+META_GRAPH_API_VERSION=v26.0
+META_PIXEL_ID=6887787878787
+TIKTOK_API_KEY=
+TIKTOK_PIXEL_ID=
+GOOGLE_API_KEY=
+GOOGLE_PIXEL_ID=g-test
+SNAPCHAT_API_KEY=
+CONVERSION_API_TIMEOUT_MS=7000
+SNAPCHAT_PIXEL_ID=
+
+RESEND_API_KEY=re_JSLZ5JXy_2TeeCJcWhjwJRURPu73XBnir
+RESEND_FROM_EMAIL=onboarding@resend.dev
+
+
+# Brevo Marketing / transactional email (server only - NEVER put this in the frontend .env)
+BREVO_API_KEY=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
+BREVO_FROM_EMAIL=dodoadam1382009@gmail.com
+BREVO_FROM_NAME=LAVA Store
+BREVO_WHATSAPP_SENDER=
+
+# Brevo Marketing / transactional email (server only - NEVER put this in frontend .env)
+BREVO_API_KEY=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
+BREVO_FROM_EMAIL=dodoadam1382009@gmail.com
+BREVO_FROM_NAME=LAVA Store
+BREVO_WHATSAPP_SENDER=
+BREVO_ORDER_CONFIRM_TEMPLATE_ID=
+BREVO_ORDER_STATUS_TEMPLATE_ID=
+
+# Kashier Hosted Checkout (server-side only; never expose SECRET_KEY in Vite/client env)
+KASHIER_MID=MID-49892-495
+KASHIER_API_KEY=a3a8fdb8-c561-4d36-8453-7fd2525f4118
+KASHIER_SECRET_KEY=f356649ed18afef8003c51b91c585688$a49b26b16d1e2ed0dc7f8a482c8c96bf9d2c1c5a1ad27ca27f435786b15d81171e1d69ad97fff864fe5eeac9c3d257b7
+KASHIER_MODE=test
+KASHIER_CURRENCY=EGP
+# Customer return URL. Example: https://your-domain.com/payment-complete
+KASHIER_CALLBACK_URL=
+# Optional server-to-server webhook URL. If empty, BACKEND_URL is used.
+KASHIER_WEBHOOK_URL=https://exact-grain-belts-hearing.trycloudflare.com/api/payments/kashier/webhook
+# LOCAL DEVELOPMENT
+# Frontend (Vite) usually runs on http://localhost:5173
+FRONTEND_URL= https://laundry-roads-assistant-chan.trycloudflare.com 
+# Backend (Express) usually runs on http://localhost:5000
+BACKEND_URL=https://numerous-celebration-cooperation-carey.trycloudflare.com
+
+ Paymob Unified Checkout (server-side only; never expose SECRET_KEY/HMAC_SECRET in Vite/client env)
+# Get these from: Paymob Dashboard > Developers > Payment Integrations / API Keys
+PAYMOB_SECRET_KEY=egy_sk_test_65b7de0989c49ab66153437cdbb6baede022e1dfb63e74f4484f07526af1e45c
+PAYMOB_PUBLIC_KEY=egy_pk_test_sAOxlqqhqhzwMBDZWCUkR8QCNjzZg89c
+# One or more integration IDs (comma-separated if you have both card + wallet, e.g. "12345,67890")
+PAYMOB_INTEGRATION_ID=5885103,5885230
+# Get this from: Paymob Dashboard > Developers > Payment Integrations > (your integration) > HMAC secret
+PAYMOB_HMAC_SECRET=EDCEDEBD5D8B9FAA1A3B78304DFC69CE
+PAYMOB_CURRENCY=EGP
+
+# Browser return URL. Leave empty to use:
+# http://localhost:5000/api/payments/paymob/callback
+# The backend callback then redirects the customer to FRONTEND_URL/payment-complete.
+PAYMOB_CALLBACK_URL=
+
+# WEBHOOK: Paymob cannot call localhost directly.
+# For local payment testing, expose your backend with an HTTPS tunnel and put
+# the PUBLIC URL here, for example:
+# PAYMOB_WEBHOOK_URL=https://YOUR-TUNNEL-DOMAIN/api/payments/paymob/webhook
+# Leave empty if you do not currently have a public tunnel.
+PAYMOB_WEBHOOK_URL=https://exact-grain-belts-hearing.trycloudflare.com/api/payments/paymob/webhook
+
+
+# Shipping integrations - fill these with credentials from the carrier.
+BOSTA_ENABLED=true
+# sandbox أو production
+BOSTA_ENVIRONMENT=production
+BOSTA_API_KEY=5a05bf883d0a54baf4553a65a9cb806293ba1c9b4eae16ba41d8cf28f1de2440
+# مفتاح API منفصل لحساب Staging (لو موجود عندك) - لو سبته فاضي هيستخدم BOSTA_API_KEY
+BOSTA_SANDBOX_API_KEY=
+# اختياري - override كامل لرابط الـAPI بدل القيم الافتراضية (sandbox/production)
+BOSTA_BASE_URL=https://app.bosta.co/api/v2
+BOSTA_DEFAULT_RATE=0
+BOSTA_PICKUP_ID=
+# لازم تحطه وقت إعداد الـWebhook عند بوسطة - شوف رابط الـWebhook تحت
+BOSTA_WEBHOOK_SECRET=
+
+
+ARAMEX_ENABLED=true
+ARAMEX_ENVIRONMENT=sandbox
+ARAMEX_USERNAME=
+ARAMEX_PASSWORD=
+ARAMEX_ACCOUNT_NUMBER=
+ARAMEX_ACCOUNT_PIN=
+ARAMEX_ACCOUNT_ENTITY=
+ARAMEX_ACCOUNT_COUNTRY_CODE=EG
+# بيانات حساب Aramex التجريبي (Sandbox) - لو مش موجودة هيستخدم بيانات الإنتاج نفسها
+ARAMEX_SANDBOX_USERNAME=
+ARAMEX_SANDBOX_PASSWORD=
+ARAMEX_SANDBOX_ACCOUNT_NUMBER=
+ARAMEX_SANDBOX_ACCOUNT_PIN=
+ARAMEX_SANDBOX_ACCOUNT_ENTITY=
+ARAMEX_BASE_URL=
+# عنوان نقطة الاستلام (Pickup / Origin) المستخدم في حساب الأسعار والشحن
+ARAMEX_PICKUP_ADDRESS=
+ARAMEX_PICKUP_CITY=Cairo
+ARAMEX_PICKUP_POST_CODE=
+ARAMEX_PICKUP_PHONE=
+ARAMEX_PICKUP_NAME=
+# مطلوب (Mandatory) في هيكل Contact الرسمي بتاع أرامكس مع اسم/تليفون المُرسِل
+ARAMEX_PICKUP_EMAIL=
+
+
+# DHL Express (MyDHL API)
+# ---------------------------------------------------------------------------
+DHL_ENABLED=false
+DHL_ENVIRONMENT=sandbox
+DHL_API_USERNAME=
+DHL_API_PASSWORD=
+DHL_ACCOUNT_NUMBER=
+# بيانات حساب DHL التجريبي (من developer.dhl.com) - مطلوبة لاستخدام سيرفر التست
+DHL_SANDBOX_API_USERNAME=
+DHL_SANDBOX_API_PASSWORD=
+DHL_SANDBOX_ACCOUNT_NUMBER=
+DHL_ORIGIN_COUNTRY_CODE=EG
+DHL_ORIGIN_CITY=Cairo
+DHL_ORIGIN_ADDRESS=
+DHL_ORIGIN_POSTAL_CODE=
+# مطلوبة (Mandatory) في Contact.fullName/phone الرسمية بتاعة MyDHL API
+DHL_ORIGIN_CONTACT_NAME=LAVA Store
+DHL_ORIGIN_PHONE=
+DHL_BASE_URL=# DHL Express (MyDHL API)
+# ---------------------------------------------------------------------------
+
+SHIPBLU_ENABLED=true
+SHIPBLU_ENVIRONMENT=production
+SHIPBLU_API_KEY=1vAPlWA6.5Wy0b0mDGV8Q3CIpqULmDMgnj1ILblcz
+SHIPBLU_SANDBOX_API_KEY=QN19FMpS.93mGcH8qLVRAPFEZlkTjGl5845TU17Ga
+SHIPBLU_BASE_URL=
+SHIPBLU_DEFAULT_PACKAGE_SIZE=1
+SHIPBLU_DEFAULT_RATE=0
+# لازم تحطه وقت إضافة الـWebhook من لوحة تحكم ShipBlu (Integrations)
+SHIPBLU_WEBHOOK_SECRET=
+
+
+
+VAPID_PUBLIC_KEY=BI8NpHf7mUK-vXT3RPV6zG3A7xL9bhfraTVXBgIlJwd4uQHWEfMrq-kug_HqbEZmR45nfNme_qxG5xgH97UnVh8
+VAPID_PRIVATE_KEY=Z_SfjzzvRo0KnVZSYi727UxGxKYWsVRcWDLjb-OCwCU
+VAPID_SUBJECT=mailto:adamdodo1382009@gmail.com
+#npx web-push generate-vapid-keys
+
+
+
+CLIENT_URL=https://laundry-roads-assistant-chan.trycloudflare.com
+
+
+
+# ---- LAVA License Foundation (PART 1A - data foundation only, no License Server yet) ----
+LICENSE_ENABLED=false
+LICENSE_ID=
+LICENSE_BUILD_ID=
+LICENSE_CACHE_TTL=
+LICENSE_GRACE_PERIOD=
+LICENSE_VALIDATION_INTERVAL=
+LICENSE_SERVER_URL=
+LICENSE_REMOTE_ENABLED=false
+LICENSE_REMOTE_TIMEOUT_MS=5000
+LICENSE_REMOTE_GRACE_PERIOD_HOURS=72
+# ---- LAVA Remote License Protocol (PART 2B-1) ----
+# Ed25519 public key بتاع License Server (PEM) - يُستخدم بس للتحقق من
+# إمضاء الردود. المفتاح الخاص (Private key) ممنوع يوصل هنا أبدًا - ده
+# موجود بس في License Server نفسه (مشروع منفصل مستقبلًا). اسيبها فاضية
+# لحد ما License Server الحقيقي يتبني.
+LICENSE_SERVER_PUBLIC_KEY=
+# ---- LAVA Remote License Heartbeat (PART 2B-2B - foundation only) ----
+# الـscheduler مش بيبدأ نفسه تلقائيًا حتى لو القيم دي موجودة - لازم حد
+# ينادي start() صراحة من application bootstrap (مش موجود لسه). الـdefault
+# هنا "مطفي" عمدًا عشان production متتأثرش بأي حاجة من غير قرار واضح.
+LICENSE_REMOTE_HEARTBEAT_ENABLED=false
+LICENSE_REMOTE_HEARTBEAT_INTERVAL_MS=900000

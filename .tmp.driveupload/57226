@@ -1,0 +1,23 @@
+# ---- LAVA License Foundation (PART 1A - data foundation only, no License Server yet) ----
+LICENSE_ENABLED=false
+LICENSE_ID=
+LICENSE_BUILD_ID=
+LICENSE_CACHE_TTL=
+LICENSE_GRACE_PERIOD=
+LICENSE_VALIDATION_INTERVAL=
+LICENSE_SERVER_URL=
+LICENSE_REMOTE_ENABLED=false
+LICENSE_REMOTE_TIMEOUT_MS=5000
+LICENSE_REMOTE_GRACE_PERIOD_HOURS=72
+# ---- LAVA Remote License Protocol (PART 2B-1) ----
+# Ed25519 public key بتاع License Server (PEM) - يُستخدم بس للتحقق من
+# إمضاء الردود. المفتاح الخاص (Private key) ممنوع يوصل هنا أبدًا - ده
+# موجود بس في License Server نفسه (مشروع منفصل مستقبلًا). اسيبها فاضية
+# لحد ما License Server الحقيقي يتبني.
+LICENSE_SERVER_PUBLIC_KEY=
+# ---- LAVA Remote License Heartbeat (PART 2B-2B - foundation only) ----
+# الـscheduler مش بيبدأ نفسه تلقائيًا حتى لو القيم دي موجودة - لازم حد
+# ينادي start() صراحة من application bootstrap (مش موجود لسه). الـdefault
+# هنا "مطفي" عمدًا عشان production متتأثرش بأي حاجة من غير قرار واضح.
+LICENSE_REMOTE_HEARTBEAT_ENABLED=false
+LICENSE_REMOTE_HEARTBEAT_INTERVAL_MS=900000

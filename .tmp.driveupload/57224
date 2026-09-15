@@ -1,0 +1,176 @@
+port=5001
+MONGODB_URI=
+JWT_SECRET=CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
+JWT_EXPIRES_IN=7d
+
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+
+# ---- Pixel IDs / API Keys بتاعة الماركتينج (تتحط هنا مش في الفرونت) ----
+META_API_KEY=
+META_GRAPH_API_VERSION=v26.0
+META_PIXEL_ID=6887787878787
+TIKTOK_API_KEY=
+TIKTOK_PIXEL_ID=
+GOOGLE_API_KEY=
+GOOGLE_PIXEL_ID=g-test
+SNAPCHAT_API_KEY=
+CONVERSION_API_TIMEOUT_MS=7000
+SNAPCHAT_PIXEL_ID=
+
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+
+
+# Brevo Marketing / transactional email (server only - NEVER put this in the frontend .env)
+BREVO_API_KEY=
+BREVO_FROM_EMAIL=
+BREVO_FROM_NAME=
+BREVO_WHATSAPP_SENDER=
+
+# Brevo Marketing / transactional email (server only - NEVER put this in frontend .env)
+BREVO_API_KEY=
+BREVO_FROM_EMAIL=
+BREVO_FROM_NAME=
+BREVO_WHATSAPP_SENDER=
+BREVO_ORDER_CONFIRM_TEMPLATE_ID=
+BREVO_ORDER_STATUS_TEMPLATE_ID=
+
+# Kashier Hosted Checkout (server-side only; never expose SECRET_KEY in Vite/client env)
+KASHIER_MID=
+KASHIER_API_KEY=
+KASHIER_SECRET_KEY=
+KASHIER_MODE=test
+KASHIER_CURRENCY=EGP
+# Customer return URL. Example: https://your-domain.com/payment-complete
+KASHIER_CALLBACK_URL=
+# Optional server-to-server webhook URL. If empty, BACKEND_URL is used.
+KASHIER_WEBHOOK_URL=
+# LOCAL DEVELOPMENT
+# Frontend (Vite) usually runs on http://localhost:5173
+FRONTEND_URL=http://localhost:5173
+# Backend (Express) usually runs on http://localhost:5000
+BACKEND_URL=http://localhost:5000
+
+ Paymob Unified Checkout (server-side only; never expose SECRET_KEY/HMAC_SECRET in Vite/client env)
+# Get these from: Paymob Dashboard > Developers > Payment Integrations / API Keys
+PAYMOB_SECRET_KEY=
+PAYMOB_PUBLIC_KEY=
+# One or more integration IDs (comma-separated if you have both card + wallet, e.g. "12345,67890")
+PAYMOB_INTEGRATION_ID=
+# Get this from: Paymob Dashboard > Developers > Payment Integrations > (your integration) > HMAC secret
+PAYMOB_HMAC_SECRET=
+PAYMOB_CURRENCY=EGP
+
+# Browser return URL. Leave empty to use:
+# http://localhost:5000/api/payments/paymob/callback
+# The backend callback then redirects the customer to FRONTEND_URL/payment-complete.
+PAYMOB_CALLBACK_URL=
+
+# WEBHOOK: Paymob cannot call localhost directly.
+# For local payment testing, expose your backend with an HTTPS tunnel and put
+# the PUBLIC URL here, for example:
+# PAYMOB_WEBHOOK_URL=https://YOUR-TUNNEL-DOMAIN/api/payments/paymob/webhook
+# Leave empty if you do not currently have a public tunnel.
+PAYMOB_WEBHOOK_URL=
+
+
+# Shipping integrations - fill these with credentials from the carrier.
+BOSTA_ENABLED=true
+# sandbox أو production
+BOSTA_ENVIRONMENT=production
+BOSTA_API_KEY=
+# مفتاح API منفصل لحساب Staging (لو موجود عندك) - لو سبته فاضي هيستخدم BOSTA_API_KEY
+BOSTA_SANDBOX_API_KEY=
+# اختياري - override كامل لرابط الـAPI بدل القيم الافتراضية (sandbox/production)
+BOSTA_BASE_URL=https://app.bosta.co/api/v2
+BOSTA_DEFAULT_RATE=0
+BOSTA_PICKUP_ID=
+# لازم تحطه وقت إعداد الـWebhook عند بوسطة - شوف رابط الـWebhook تحت
+BOSTA_WEBHOOK_SECRET=
+
+
+ARAMEX_ENABLED=true
+ARAMEX_ENVIRONMENT=sandbox
+ARAMEX_USERNAME=
+ARAMEX_PASSWORD=
+ARAMEX_ACCOUNT_NUMBER=
+ARAMEX_ACCOUNT_PIN=
+ARAMEX_ACCOUNT_ENTITY=
+ARAMEX_ACCOUNT_COUNTRY_CODE=EG
+# بيانات حساب Aramex التجريبي (Sandbox) - لو مش موجودة هيستخدم بيانات الإنتاج نفسها
+ARAMEX_SANDBOX_USERNAME=
+ARAMEX_SANDBOX_PASSWORD=
+ARAMEX_SANDBOX_ACCOUNT_NUMBER=
+ARAMEX_SANDBOX_ACCOUNT_PIN=
+ARAMEX_SANDBOX_ACCOUNT_ENTITY=
+ARAMEX_BASE_URL=
+# عنوان نقطة الاستلام (Pickup / Origin) المستخدم في حساب الأسعار والشحن
+ARAMEX_PICKUP_ADDRESS=
+ARAMEX_PICKUP_CITY=Cairo
+ARAMEX_PICKUP_POST_CODE=
+ARAMEX_PICKUP_PHONE=
+ARAMEX_PICKUP_NAME=
+# مطلوب (Mandatory) في هيكل Contact الرسمي بتاع أرامكس مع اسم/تليفون المُرسِل
+ARAMEX_PICKUP_EMAIL=
+
+
+# DHL Express (MyDHL API)
+# ---------------------------------------------------------------------------
+DHL_ENABLED=false
+DHL_ENVIRONMENT=sandbox
+DHL_API_USERNAME=
+DHL_API_PASSWORD=
+DHL_ACCOUNT_NUMBER=
+# بيانات حساب DHL التجريبي (من developer.dhl.com) - مطلوبة لاستخدام سيرفر التست
+DHL_SANDBOX_API_USERNAME=
+DHL_SANDBOX_API_PASSWORD=
+DHL_SANDBOX_ACCOUNT_NUMBER=
+DHL_ORIGIN_COUNTRY_CODE=EG
+DHL_ORIGIN_CITY=Cairo
+DHL_ORIGIN_ADDRESS=
+DHL_ORIGIN_POSTAL_CODE=
+# مطلوبة (Mandatory) في Contact.fullName/phone الرسمية بتاعة MyDHL API
+DHL_ORIGIN_CONTACT_NAME=LAVA Store
+DHL_ORIGIN_PHONE=
+DHL_BASE_URL=# DHL Express (MyDHL API)
+# ---------------------------------------------------------------------------
+
+SHIPBLU_ENABLED=true
+SHIPBLU_ENVIRONMENT=production
+SHIPBLU_API_KEY=
+SHIPBLU_SANDBOX_API_KEY=
+SHIPBLU_BASE_URL=
+SHIPBLU_DEFAULT_PACKAGE_SIZE=1
+SHIPBLU_DEFAULT_RATE=0
+# لازم تحطه وقت إضافة الـWebhook من لوحة تحكم ShipBlu (Integrations)
+SHIPBLU_WEBHOOK_SECRET=
+
+
+CLIENT_URL=
+
+# ---- LAVA License Foundation (PART 1A - data foundation only, no License Server yet) ----
+LICENSE_ENABLED=false
+LICENSE_ID=
+LICENSE_BUILD_ID=
+LICENSE_CACHE_TTL=
+LICENSE_GRACE_PERIOD=
+LICENSE_VALIDATION_INTERVAL=
+LICENSE_SERVER_URL=
+LICENSE_REMOTE_ENABLED=false
+LICENSE_REMOTE_TIMEOUT_MS=5000
+LICENSE_REMOTE_GRACE_PERIOD_HOURS=72
+# Heartbeat scheduler (services/license/licenseRemoteHeartbeatScheduler.js):
+# separate opt-in from LICENSE_REMOTE_ENABLED — remote calls can be
+# enabled (e.g. for on-demand ACTIVATE/VALIDATE) without the periodic
+# background heartbeat also running.
+LICENSE_REMOTE_HEARTBEAT_ENABLED=false
+LICENSE_REMOTE_HEARTBEAT_INTERVAL_MS=
+# ---- LAVA Remote License Protocol (PART 2B-1) ----
+# Ed25519 public key بتاع License Server (PEM) - يُستخدم بس للتحقق من
+# إمضاء الردود. المفتاح الخاص (Private key) ممنوع يوصل هنا أبدًا - ده
+# موجود بس في License Server نفسه (مشروع منفصل مستقبلًا). اسيبها فاضية
+# لحد ما License Server الحقيقي يتبني.
+LICENSE_SERVER_PUBLIC_KEY=
